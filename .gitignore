@@ -17,7 +17,6 @@
 # /htdocs/*
 ###########
 /htdocs/nbproject
-/htdocs/typo3_src*
 
 
 ###########
