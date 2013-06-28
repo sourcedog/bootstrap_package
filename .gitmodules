@@ -13,9 +13,6 @@
 [submodule "htdocs/typo3conf/ext/vhs"]
 	path = htdocs/typo3conf/ext/vhs
 	url = git://github.com/FluidTYPO3/vhs
-[submodule "htdocs/typo3conf/ext/introduction"]
-	path = htdocs/typo3conf/ext/introduction
-	url = git://github.com/Ecodev/introduction
 [submodule "htdocs/typo3conf/ext/media"]
 	path = htdocs/typo3conf/ext/media
 	url = git://git.typo3.org/TYPO3v4/Extensions/media.git
