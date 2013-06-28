@@ -28,7 +28,6 @@
 ######################
 # /htdocs/typo3conf/
 ######################
-/htdocs/typo3conf/LocalConfiguration.php
 /htdocs/typo3conf/ENABLE_INSTALL_TOOL
 /htdocs/typo3conf/FIRST_INSTALL
 /htdocs/typo3conf/*.log

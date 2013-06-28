@@ -1,7 +1,7 @@
 <?php
 
 // Security tip for production: putting the database password outside the document root!
-$databaseCredentialsFile = PATH_site . '../scripts/Configuration.php';
+$databaseCredentialsFile = PATH_site . '../config/Configuration.php';
 if (file_exists($databaseCredentialsFile)) {
 	require_once ($databaseCredentialsFile);
 	// file ``private/Database.php`` should contains something like:
@@ -13,7 +13,7 @@ if (file_exists($databaseCredentialsFile)) {
 
 
 # Frontend Settings
-#$GLOBALS['TYPO3_CONF_VARS']['FE']['pageNotFound_handling'] = '404.html';
+$GLOBALS['TYPO3_CONF_VARS']['FE']['pageNotFound_handling'] = '404.html';
 
 # Menu for clearing the language cache
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['lang']['cache']['clear_menu'] = TRUE;
