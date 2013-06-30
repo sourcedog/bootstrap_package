@@ -215,7 +215,7 @@ How to bootstrap a working TYPO3 installation with Capistrano
 
 First create a PHP file holding the local configuration options. For example:
 
-File: private/Configuration.prod.php
+File: private/Configuration.prod.php::
 
     <?php
 
@@ -230,7 +230,7 @@ File: private/Configuration.prod.php
 
     ?>
 
-Then issue the following commands:
+Then issue the following commands: ::
 
   gem install bundler
   bundle install
@@ -241,6 +241,6 @@ Then issue the following commands:
   bundle exec cap deploy
 
 
-From now on, to deploy further changes just:
+From now on, to deploy further changes just: ::
 
   bundle exec cap deploy
