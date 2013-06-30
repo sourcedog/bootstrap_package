@@ -206,3 +206,41 @@ Packaging
 ---------------
 
 There are some instruction in this repository https://github.com/Ecodev/bootstrap_package/tree/master/scripts/PackageMaker
+
+
+Capistrano integration
+=====================================
+
+How to bootstrap a working TYPO3 installation with Capistrano
+
+First create a PHP file holding the local configuration options. For example:
+
+File: private/Configuration.prod.php
+
+    <?php
+
+    $GLOBALS['TYPO3_CONF_VARS']['DB']['database'] = 'typo3deploy';
+    $GLOBALS['TYPO3_CONF_VARS']['DB']['host'] = 'localhost';
+    $GLOBALS['TYPO3_CONF_VARS']['DB']['password'] = 'typo3deploy';
+    $GLOBALS['TYPO3_CONF_VARS']['DB']['username'] = 'typo3deploy';
+
+    $GLOBALS['TYPO3_CONF_VARS']['BE']['installToolPassword'] = '5f4dcc3b5aa765d61d8327deb882cf99';
+
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['encryptionKey'] = '1d81c1b0544028dcf51d82566eaa89c7715cc0fa6a152253fe9b6cd716d7bf8ccee96139cb954fb29f74c2d400c10b1e';
+
+    ?>
+
+Then issue the following commands:
+
+  gem install bundler
+  bundle install
+  bundle exec cap deploy:setup
+  bundle exec cap typo3:pushconfig FILE=private/Configuration.prod.php
+  bundle exec cap media:push
+  bundle exec cap db:push
+  bundle exec cap deploy
+
+
+From now on, to deploy further changes just:
+
+  bundle exec cap deploy
