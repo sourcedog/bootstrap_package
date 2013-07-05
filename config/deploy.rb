@@ -1,5 +1,5 @@
 set :application, "test"
-set :repository,  "git://github.com/jaguerra/bootstrap_package.git"
+set :repository,  "git@github.com:sourcedog/bootstrap_package.git"
 
 set :scm, :git 
 
@@ -8,16 +8,16 @@ set :scm, :git
 #
 # Otherwise you should change the hostname to something different
 
-role :web, "typo3deploy" 
-role :db, "typo3deploy"
+role :web, "virgo.uberspace.de" 
+role :db, "virgo.uberspace.de"
 
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"
 
 set :git_enable_submodules, 1
-set :deploy_to, "/var/www"
+set :deploy_to, "/home/sourcedo/srv/typo3test.sd-dev.net"
 set :use_sudo, false
-set :user, "vagrant"
+set :user, "sourcedog"
 
 set :shared_children,   ['htdocs/fileadmin', 'htdocs/uploads', 'private']
 set :deploy_via, :remote_cache
