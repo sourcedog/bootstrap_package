@@ -88,6 +88,7 @@ return array(
 			'scheduler',
 			'nc_staticfilecache',
 			'coreapi',
+			'powermail'
 		),
 	),
 	'FE' => array(
