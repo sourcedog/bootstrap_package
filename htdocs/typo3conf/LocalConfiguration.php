@@ -87,6 +87,7 @@ return array(
 			'media',
 			'scheduler',
 			'nc_staticfilecache',
+			'coreapi',
 		),
 	),
 	'FE' => array(
